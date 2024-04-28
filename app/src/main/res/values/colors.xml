@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Couleur de la piste non remplie -->
+    <color name="customSeekBarTrackColor">#CCCCCC</color>
+    <!-- Couleur de la piste remplie -->
+    <color name="customSeekBarProgressColor">#FF5722</color>
+    <!-- Couleur du pouce -->
+    <color name="customSeekBarThumbColor">#FF5722</color>
+</resources>

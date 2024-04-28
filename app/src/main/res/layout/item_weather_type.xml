@@ -1,0 +1,23 @@
+<!-- res/layout/item_weather_type.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageViewWeatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewWeatherType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weather Type"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>
