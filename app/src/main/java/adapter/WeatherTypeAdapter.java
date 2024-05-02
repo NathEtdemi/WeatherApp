@@ -6,7 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.example.meteo.R;
 
@@ -25,8 +29,31 @@ public class WeatherTypeAdapter extends ArrayAdapter<WeatherType> {
         this.inflater = LayoutInflater.from(context);
     }
 
+    @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        View view = convertView;
+        if (view == null) {
+            view = inflater.inflate(R.layout.item_weather_type, parent, false);
+        }
+
+        WeatherType weatherType = weatherTypes.get(position);
+
+        ImageView imageView = view.findViewById(R.id.imageViewWeatherIcon);
+        TextView textView = view.findViewById(R.id.textViewWeatherType);
+
+        imageView.setImageResource(getWeatherIconResourceId(weatherType.getId()));
+        textView.setText(weatherType.getName());
+
+        return view;
+    }
+
+    @Override
+    public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        return getCustomView(position, convertView, parent);
+    }
+
+    private View getCustomView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
         if (view == null) {
             view = inflater.inflate(R.layout.item_weather_type, parent, false);
@@ -66,5 +93,4 @@ public class WeatherTypeAdapter extends ArrayAdapter<WeatherType> {
                 return R.drawable.ic_launcher_foreground;
         }
     }
-
 }

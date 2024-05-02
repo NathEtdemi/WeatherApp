@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
 
                         replace(new AddFragment());
-                        main_layout.setBackgroundColor(Color.parseColor("#673AB7"));
+                        main_layout.setBackgroundColor(Color.parseColor("#ADD8E6"));
 
                         break;
 
